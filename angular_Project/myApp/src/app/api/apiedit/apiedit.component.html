@@ -1,0 +1,14 @@
+<div  id="editform"  >
+    <label>edit job name : </label>
+<form  [formGroup]="myform1" >
+    <input id="demo" [value]="jobnameforedit"  type="text" placeholder="inter job name"><br>
+    <span style="color:red" *ngIf="validate && validate.invalid && validate.touched" >please make some change for edit </span><br>
+    <span style="color :green" *ngIf="success" >data has been updated</span>
+     <span style="color : rgb(238, 66, 13)" *ngIf="errmassage" >{{errmassage}}</span>
+    <span style="color : rgb(216, 93, 93)" *ngIf="err" > some eror occured</span><br> 
+    <p>{{jobnameforedit}}</p>
+    <!-- <button  [disabled]="myform1.invalid " (click)="postediteddata()">submit</button> -->
+    <button [value]="jobidforedit" (click)="postediteddata($event)">submit</button>
+    <!-- <button   (click)="editing()">submit</button> -->
+</form>
+</div>

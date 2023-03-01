@@ -1,0 +1,19 @@
+
+<div>
+  <h1>angular reactive form</h1>
+
+<form [formGroup]="myform" >
+  <label>inter your name </label><br>
+  <input formControlName="name" type="text"><br>
+  <span *ngIf="valid && valid.invalid && valid.touched" style="color : red"  > name is required</span><br>
+  <label>inter your surname </label><br>
+  <input formControlName="surname" type="text"><br>
+  <span style="color : red " *ngIf="sname && sname.invalid && sname.touched" >this field i srequired</span><br>
+  <label>inter your contact detail </label><br>
+  <input formControlName="contactdetail" type="text"><br>
+  <span style="color : red " *ngIf="num && num.invalid && num.touched" >this field i srequired</span><br>
+  <button [disabled]="myform.invalid" (click)="userdata()" > submit</button>
+
+</form>
+
+</div>

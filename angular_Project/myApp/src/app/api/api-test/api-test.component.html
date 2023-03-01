@@ -1,0 +1,55 @@
+
+<div>
+<p>api testing page</p>
+
+    <select (change)="handleChange($event)" >
+        <option>select</option>
+        <option>java</option>
+        <option>python</option>
+        <option>c++</option>
+        <option>c#</option>
+    </select>
+    <P *ngIf="lang" > the selacted langauge id {{lang}}</P>
+</div>
+
+<ul>
+    <li *ngFor="let state of stateData" > {{ state }} </li>
+</ul>
+<div>
+    <h2> data from api </h2>
+    <!-- <app-apiedit></app-apiedit> -->
+    <!-- <button (click)="showdata()">click to show data</button> -->
+<!-- <div  id="editform"  >
+        <label>edit job name : </label>
+    <form  [formGroup]="myform1" >
+        <input  value="{{jobnameforedit}}" formControlName="job_name" type="text" placeholder="inter job name"><br>
+        <span style="color:red" *ngIf="validate && validate.invalid && validate.touched" >please make some change for edit </span><br>
+        <span style="color :green" *ngIf="success" >data has been updated</span>
+         <span style="color : rgb(238, 66, 13)" *ngIf="errmassage" >{{errmassage}}</span>
+        <span style="color : rgb(216, 93, 93)" *ngIf="err" > some eror occured</span><br> 
+
+        <button  [disabled]="myform1.invalid " (click)="postediteddata()">submit</button>
+    </form>
+</div> -->
+
+    <table id="data">
+        <tr>
+            <td>job id</td>
+            <td>job name</td>
+            <td>action</td>
+            <td>action</td>
+        </tr>
+       
+        <tr  *ngFor="let iteam of data.data?.list" >
+            <!-- <tr  *ngFor="let iteam of data" > -->
+            
+            <td  > {{iteam.job_id}} </td>
+            <td> {{iteam.job_name}} </td> 
+            <td><button value="{{iteam.job_id}}" (click)="deletuser($event)" >delet</button></td>
+            <td>  <button value="{{iteam.job_id}}" (click)="editjob($event)" >edit</button> </td>
+         </tr>
+    </table>
+    <button *ngIf="data.data?.pagination.has_previous"  (click)="prev()" >prev</button> &nbsp;&nbsp;
+    <button *ngIf="data.data?.pagination.has_next" (click)="next()" >next</button>
+
+</div> 

@@ -1,0 +1,26 @@
+div {
+    text-align: center;
+}
+
+#delet {
+    background-color: #f44336;
+   padding: 7px;
+   border-radius: 5px;
+   margin-left: 10px;
+   color: white;
+}
+
+
+#addfield {
+    background-color: #4c6baf; /* Green */
+    border: none;
+    color: white;
+    padding:8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 6px;
+}

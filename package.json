@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "formik": "^2.2.9",
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}

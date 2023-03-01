@@ -1,0 +1,18 @@
+<div>
+    <h1>angular post api in form</h1>
+
+    <form [formGroup]="myform" >
+        <label>job name : </label>
+        <input formControlName="job_name" type="text" placeholder="inter job name"><br>
+        <span style="color:red" *ngIf="validate && validate.invalid && validate.touched" >this field is required</span><br>
+        <!-- <span *ngIf="response.success" >data has been added</span> -->
+        <span style="color : rgb(20, 238, 13)" *ngIf="success" >data added successful</span>
+        <span style="color : rgb(216, 93, 93)" *ngIf="error" > {{error}}</span><br>
+
+        <span  ></span>
+        <button  [disabled]="myform.invalid " (click)="handleSubmit()">submit</button>
+    </form>
+
+</div>
+
+<!-- Where the validation , -->
